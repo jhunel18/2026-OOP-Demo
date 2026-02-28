@@ -1,17 +1,19 @@
-package org.example;
+package org.example.gui_sample;
 
 import javax.swing.*;
+import java.awt.*;
 
-public class Main {
+public class MainGUI {
     public static void main(String[] args) {
         int attempts = 0;
         String code;
 
         JFrame frame = new JFrame("First GUI");
-        frame.setSize(600, 400);
+        frame.setSize(800, 500);
 
         JLabel label = new JLabel("Welcome to World of Programming");
-        label.setSize(80, 40);
+        Font f = new Font("Arial", Font.BOLD, 120);
+        label.setFont(f);
 
         while(true){
             code = JOptionPane.showInputDialog("Enter the code : ");
