@@ -1,38 +1,24 @@
 package org.example;
 
-import javax.swing.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int attempts = 0;
-        String code;
 
-        JFrame frame = new JFrame("First GUI");
-        frame.setSize(600, 400);
+        String username = "";
+        String password = "";
+        Scanner sc = new Scanner(System.in);
 
-        JLabel label = new JLabel("Welcome to World of Programming");
-        label.setSize(80, 40);
+        System.out.println("Enter your name: ");
+        username = sc.nextLine();
+        System.out.println("Enter your password: ");
+        password = sc.nextLine();
 
-        while(true){
-            code = JOptionPane.showInputDialog("Enter the code : ");
-            if(!code.equals("0001")){
-
-                JOptionPane.showMessageDialog(null, "Please Try again!");
-                attempts +=1;
-                if(attempts >=3){
-                    JOptionPane.showMessageDialog(null, "Maximum Attempts");
-                    break;
-                }
-            }
-            else{
-                JOptionPane.showMessageDialog(null, "Welcome User");
-                label.setVisible(true);
-                frame.add(label);
-                frame.setVisible(true);
-                break;
-            }
+        if(username.equals("admin") && password.equals("1234")) {
+            System.out.println("Login Successful");
+        } else {
+            System.out.println("Login Failed");
         }
 
     }
 }
-
