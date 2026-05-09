@@ -1,7 +1,5 @@
 package org.example.array_examples;
 
-import java.util.List;
-
 public class DailyProductionCount {
 
     public static int getTotal(int[] num){
